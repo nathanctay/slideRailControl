@@ -1,3 +1,6 @@
+# A slide rail control to move the camera
+# code adapted from realpython.com How to Build a Python GUI Application With wxPython
+
 import wx
 
 ##create the class that creates everything
