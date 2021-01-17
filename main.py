@@ -39,6 +39,7 @@ class MyFrame(wx.Frame):
         ## retrieve the values from the text boxes
         distance = self.distance_box.GetValue()
         time = self.time_box.GetValue()
+        speed = float(distance) / float(time)
         if not distance and not time:
             print("You didn't enter anything!")
         elif not distance and time:
@@ -46,7 +47,7 @@ class MyFrame(wx.Frame):
         elif distance and not time:
             print("You didn't enter a timeframe")
         else:
-            print(f'You want to move it {distance} units over the {time} seconds.')
+            print(f'You want to move it {distance} units over the {time} seconds. Thats {speed:.2f} units/second')
 ## run program
 if __name__ == '__main__':
     app = wx.App()
